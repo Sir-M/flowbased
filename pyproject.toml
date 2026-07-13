@@ -1,0 +1,14 @@
+[project]
+name = "coresgm-grid-map"
+version = "0.1.0"
+description = "Grid Congestion Tool"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit",
+    "polars",
+    "pandas",
+    "plotly",
+    "jao-py",
+    "pyarrow",
+]

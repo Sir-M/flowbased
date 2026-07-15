@@ -2,7 +2,6 @@
 name = "coresgm-grid-map"
 version = "0.1.0"
 description = "Grid Congestion Tool"
-package-mode = false
 requires-python = ">=3.10"
 dependencies = [
     "streamlit",
@@ -11,4 +10,11 @@ dependencies = [
     "plotly",
     "jao-py",
     "pyarrow",
+]
+[tool.poetry]
+name = "coresgm-grid-map"
+version = "0.1.0"
+
+packages = [
+    { include = "flowbasedmap" } # Or whatever your source folder is named
 ]

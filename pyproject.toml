@@ -14,7 +14,4 @@ dependencies = [
 [tool.poetry]
 name = "coresgm-grid-map"
 version = "0.1.0"
-
-packages = [
-    { include = "flowbasedmap" } # Or whatever your source folder is named
-]
+package-mode = false

@@ -2,6 +2,7 @@
 name = "coresgm-grid-map"
 version = "0.1.0"
 description = "Grid Congestion Tool"
+package-mode = false
 requires-python = ">=3.10"
 dependencies = [
     "streamlit",

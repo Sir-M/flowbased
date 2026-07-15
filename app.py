@@ -11,18 +11,29 @@ st.set_page_config(
     page_title="CoreSGMv8 Grid Map",
     initial_sidebar_state="expanded"
 )
-
 st.markdown("""
     <style>
+        /* Hide the top decoration bar and the header menu/deploy button */
+        [data-testid="stDecoration"], 
+        [data-testid="stHeader"] {
+            display: none !important;
+            height: 0px !important;
+        }
+
+        /* Remove all margins and padding from the main container */
         .block-container {
             padding-top: 0rem !important;
             padding-bottom: 0rem !important;
             padding-left: 0rem !important;
             padding-right: 0rem !important;
         }
+
+        /* Remove spacing between Streamlit blocks */
         [data-testid="stVerticalBlock"] {
             gap: 0rem !important;
         }
+
+        /* Force the Plotly chart to fill the entire viewport */
         .stPlotlyChart {
             height: 100vh !important;
             width: 100vw !important;
@@ -271,7 +282,7 @@ if ln_no:
     ))
 if ln_co:
     fig.add_trace(go.Scattermapbox(
-        lon=ln_co, lat=lt_co, mode="lines", line=dict(width=3.5, color="#f39c12"),
+        lon=ln_co, lat=lt_co, mode="lines", line=dict(width=3.5, color="#e74c3c"),
         hoverinfo="text", text=h_co, name="Internal Lines (Congested)"
     ))
 
@@ -283,7 +294,7 @@ if t_ln_no:
     ))
 if t_ln_co:
     fig.add_trace(go.Scattermapbox(
-        lon=t_ln_co, lat=t_lt_co, mode="lines", line=dict(width=4.5, color="#e74c3c"),
+        lon=t_ln_co, lat=t_lt_co, mode="lines", line=dict(width=4.5, color="#a13327"),
         hoverinfo="text", text=t_h_co, name="Cross-Border Tielines (Congested)"
     ))
 
